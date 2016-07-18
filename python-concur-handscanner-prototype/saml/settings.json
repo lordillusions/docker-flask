@@ -1,0 +1,31 @@
+{
+    "strict": true,
+    "debug": true,
+    "sp": {
+        "entityId": "https://python-concur-handscanner-prototype.mybluemix.net/metadata/",
+        "assertionConsumerService": {
+            "url": "https://python-concur-handscanner-prototype.mybluemix.net/?acs",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+        },
+        "singleLogoutService": {
+            "url": "https://python-concur-handscanner-prototype.mybluemix.net/?sls",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+        "x509cert": "",
+        "privateKey": ""
+    },
+    "idp": {
+
+        "entityId": "https://w3id.alpha.sso.ibm.com/auth/sps/samlidp/saml20",
+        "singleSignOnService": {
+            "url": "https://w3id.alpha.sso.ibm.com/auth/sps/samlidp/saml20/logininitial?RequestBinding=HTTPPost&PartnerId=https://python-concur-handscanner-prototype.mybluemix.net/metadata/&NameIdFormat=email&Target=https://python-concur-handscanner-prototype.mybluemix.net/",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "singleLogoutService": {
+            "url": "https://w3id.alpha.sso.ibm.com/auth/sps/samlidp/saml20/logout",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "x509cert": "MIIDdzCCAl+gAwIBAgIENmZ8gDANBgkqhkiG9w0BAQsFADBsMQswCQYDVQQGEwJVUzELMAkGA1UECBMCTlkxDzANBgNVBAcTBkFybW9uazEQMA4GA1UEChMHaWJtLmNvbTEMMAoGA1UECxMDQ0lTMR8wHQYDVQQDExZ3M2lkLmFscGhhLnNzby5pYm0uY29tMB4XDTE1MTEyMDE3NDAyM1oXDTE4MTExOTE3NDAyM1owbDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAk5ZMQ8wDQYDVQQHEwZBcm1vbmsxEDAOBgNVBAoTB2libS5jb20xDDAKBgNVBAsTA0NJUzEfMB0GA1UEAxMWdzNpZC5hbHBoYS5zc28uaWJtLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIMdVEidEhUKdfUFwR5+bOk12uJHtiE2D+6LyeMJOdLInWbNFrl3WP9TL5fjeF9oNACQcuQy7Ll2rt+UqUXbU3pVvT7bzoyfeJWAPjzRqFP2f/U40sBbftVHnbC8mRcwD7VyJqjB3IIfV78mYfrJUM6b3hYW2GGU9dzkNpKc1S7dDmbpkOwFqn4PgRVJNnS3eZq7T46hS6gjnfD1MAsDTPszkwMWB4jMQuhvswt3+fgcGBmKlQFVXidDRyg7aA8oYq5Mj07307ulywzt/oyXljQCai/9M1wg3MpuQ+Qb0iJ+W1oiBRpRUATbYuUFC3fPV886LmH7UOd6MxrWrGjuuS8CAwEAAaMhMB8wHQYDVR0OBBYEFAtr3Gj757xspsi5XIZI7E9041j+MA0GCSqGSIb3DQEBCwUAA4IBAQBGM7PALAwVEsqS8egOHMOGuKTSSPZVCdlxi8xpP4f5feoaK0f7gqiD2ujsi7Oy7IuZ4USAh61tjSmdayHDTwrfpih+vaMts5lz4O+Z5Ox/2itYggDOPp3ajohVfGn0EupWnRVy3RotiWQ9WvHeBTCitmEICLnSi4gYmfILeJKBCo5zrM1E2OD2ESdtTLwgQyx9xxL78Zf/yF0l8e4o1ttwuxx/e/IghC1OQcX2mIlH/68NABTYD3jLdNUK65zrbMhRPhWpqXEdOOmKdQjtcZPpihVawDSHGjVhqPaYam7/aAMJ5jJHuy2qZCM8ZgY05KVmlcdO/S4rCgeXLS8uMhpE"
+    }
+}

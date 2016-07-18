@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Report Mass Update - Concur User Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+{% block content %}
+
+    {% if errors %}
+      <div class="alert alert-danger" role="alert">
+        <strong>Errors:</strong>
+        <ul class="list-unstyled">
+            {% for err in errors %}
+              <li>{{err}}</li>
+            {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    {% if not_auth_warn %}
+      <div class="alert alert-danger" role="alert">Not authenticated</div>
+    {% endif %}
+
+    {% if success_slo %}
+      <div class="alert alert-success" role="alert">Successfully logged out</div>
+    {% endif %}
+{% if paint_logout %}
+  {% if attributes %}
+    <div class="container">
+      <h1>Please login in Concur</h1>
+      <p><strong>Logged as IBM User: {{ attributes[3][1][0] }} ({{ attributes[5][1][0] }} )</strong></p>
+      <br>
+      <form action="/login" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+  {% endif %}
+    <a href="?slo" class="btn btn-danger">Logout IBM</a>
+{% else %}
+    <a href="?sso" class="btn btn-primary">Login</a> <a href="?sso2" class="btn btn-info">Login</a>
+{% endif %}
+    </div>
+
+{% endblock %}
+  </body>
+</html>
+
+

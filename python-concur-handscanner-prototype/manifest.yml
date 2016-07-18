@@ -1,0 +1,9 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: mybluemix.net
+  name: python-concur-handscanner-prototype
+  host: python-concur-handscanner-prototype
+  disk_quota: 512M
+  buildpack: python_buildpack

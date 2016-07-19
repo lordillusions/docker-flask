@@ -2,13 +2,13 @@
     "strict": true,
     "debug": true,
     "sp": {
-        "entityId": "https://python-concur-handscanner-prototype.mybluemix.net/metadata/",
+        "entityId": "https://travelibm.mybluemix.net/metadata/",
         "assertionConsumerService": {
-            "url": "https://python-concur-handscanner-prototype.mybluemix.net/?acs",
+            "url": "https://travelibm.mybluemix.net/?acs",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
         },
         "singleLogoutService": {
-            "url": "https://python-concur-handscanner-prototype.mybluemix.net/?sls",
+            "url": "https://travelibm.mybluemix.net/?sls",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
         },
         "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
@@ -19,7 +19,7 @@
 
         "entityId": "https://w3id.alpha.sso.ibm.com/auth/sps/samlidp/saml20",
         "singleSignOnService": {
-            "url": "https://w3id.alpha.sso.ibm.com/auth/sps/samlidp/saml20/logininitial?RequestBinding=HTTPPost&PartnerId=https://python-concur-handscanner-prototype.mybluemix.net/metadata/&NameIdFormat=email&Target=https://python-concur-handscanner-prototype.mybluemix.net/",
+            "url": "https://w3id.alpha.sso.ibm.com/auth/sps/samlidp/saml20/logininitial?RequestBinding=HTTPPost&PartnerId=https://travelibm.mybluemix.net/metadata/&NameIdFormat=email&Target=https://travelibm.mybluemix.net/",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
         },
         "singleLogoutService": {

@@ -3,3 +3,4 @@ requests
 prettytable
 Pillow
 xmltodict
+python-saml

@@ -1,2 +1,5 @@
-uwsgi 
-flask
+Flask==0.10.1
+requests
+prettytable
+Pillow
+xmltodict

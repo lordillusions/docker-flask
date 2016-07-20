@@ -472,7 +472,7 @@ def receiptsInput():
     else:
         return 'Invalid Token - Please Login /login'
 
-port = os.getenv('PORT', '80')
+port = os.getenv('PORT', '443')
 if __name__ == "__main__":
     context = (os.path.join(APP_ROOT, 'saml/certs/sp.crt'), os.path.join(APP_ROOT, 'saml/certs/sp.key'))
     #app.run(host='0.0.0.0', port=int(port), debug=True) #no ssl

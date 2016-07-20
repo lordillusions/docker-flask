@@ -13,6 +13,6 @@ WORKDIR /opt/app/
 RUN ls -la /opt/app/saml/certs/
 RUN ls -la /opt/app/
 RUN pip install -r requirements.txt
-EXPOSE 80
+#EXPOSE 80
 ENTRYPOINT ["python"]
 CMD ["welcome.py"]

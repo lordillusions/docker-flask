@@ -475,6 +475,6 @@ def receiptsInput():
 port = os.getenv('PORT', '80')
 if __name__ == "__main__":
     context = (os.path.join(APP_ROOT, 'saml/certs/sp.crt'), os.path.join(APP_ROOT, 'saml/certs/sp.key'))
-    app.run(host='0.0.0.0', port=int(port), debug=True) #no ssl
-    #app.run(host='0.0.0.0', port=int(port), ssl_context=context, threaded=True, debug=True)
+    #app.run(host='0.0.0.0', port=int(port), debug=True) #no ssl
+    app.run(host='0.0.0.0', port=int(port), ssl_context=context, threaded=True, debug=True)
     #app.run(host='0.0.0.0', ssl_context=context, threaded=True, debug=True)

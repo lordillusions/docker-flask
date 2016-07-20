@@ -11,11 +11,6 @@ import re
 
 from _xml2json import elem_to_internal, internal_to_elem, UsingPrefix
 
-import ssl
-
-ssl._create_default_https_context = ssl._create_unverified_context
-
-
 class ConcurAPIError(Exception):
     """Raised if the Concur API returns an error."""
     pass
@@ -127,18 +122,11 @@ class ConcurClient(object):
 
         headers['Authorization'] = '%s %s' % (self.authentication_scheme, access_token)
 
-        proxies = {
-          'http': 'http://159.122.223.55:4022',
-          'https': 'http://159.122.223.55:4022',
-        }
-
-
         resp = requests.request(method, url,
                                 params=params,
                                 headers=headers,
                                 data=data,
-                                #proxies=proxies,
-                                verify=False
+                                verify=False,
                                 )
         if str(resp.status_code)[0] not in ('2', '3'):
             print 'method =', method
